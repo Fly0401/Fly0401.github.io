@@ -277,7 +277,11 @@
 <p>，蹦出一个类似命令行窗口的东西，就说明Git安装成功　</p>
 <h2 id="设置Git"><a href="#设置Git" class="headerlink" title="设置Git"></a>设置Git</h2><p>安装完成后，还需要最后一步设置，在命令行输入：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">"Your Name"</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.email <span class="string">"email@example.com"</span></div></pre></td></tr></table></figure>
-<h2 id="设置完成"><a href="#设置完成" class="headerlink" title="设置完成"></a>设置完成</h2><p>鼠标右键出现Git Bash Here 和Git GUI Atom表示成功</p>
+<h2 id="设置完成"><a href="#设置完成" class="headerlink" title="设置完成"></a>设置完成</h2><p>鼠标右键出现<code>Git Bash Here</code> 和<code>Git GUI Here</code>表示成功</p>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><p>查看分支：<br><code>git branch</code><br>创建分支：<br><code>git branch &lt;name&gt;</code><br>切换分支：<br><code>git checkout &lt;name&gt;</code><br>创建+切换分支：<br><code>git checkout -b &lt;name&gt;</code><br>合并某分支到当前分支：<br><code>git merge &lt;name&gt;</code><br>删除分支：<br><code>git branch -d &lt;name&gt;</code>   </p>
+<h2 id="推送内容"><a href="#推送内容" class="headerlink" title="推送内容"></a>推送内容</h2><p>将我们本地的仓库与远程的github 上的仓库连接起来</p>
+<p>下一步，我们开始推送我们本地仓库上的内容</p>
+<p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支master推送到远程。<br>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。<br>推送成功后，可以立刻在GitHub页面中看到远程库的内容已经和本地一模一样：<br><code>git push -u origin master</code><br>要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；<br>关联后，使用命令<br><code>git push -u origin master</code><br>第一次推送master分支的所有内容；<br>此后，每次本地提交后，只要有必要，就可以使用命令    <code>git push origin master</code>    推送最新修改；</p>
 
       
     </div>
